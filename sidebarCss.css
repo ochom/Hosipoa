@@ -1,0 +1,218 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+body {
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+
+#sidebar-wrapper {
+  color: white;
+  background-color: #112233;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+.page_scroller{
+  position: relative;  height: calc(100vh - 120px); width: calc(100% - 2rem); 
+  padding: 10px 20px; border-radius: 5px; border:1px solid #ccc; margin:auto;
+  margin-top: 10px;  overflow-y: auto; background-color: #fff;
+} 
+
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0; 
+}
+
+#wrapper.toggled .page_scroller {
+  width: calc(100% - 2rem); 
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100vw;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  } 
+}
+
+.list-group-flush a{
+  background-color: #112233;
+  color: white; font-size: 14px; padding: 10px 10px;
+}
+
+.active-sidebar{
+  background-color: white;
+  color: #555;
+}
+
+.logged_in{
+  position: fixed; bottom: 5px; left: 5px; color: grey; font-style: italic; font-size: 10px; padding: 5px;
+}
+
+/*LOADING BAR CSS*/
+.box2{
+      background-color: #f80; height: 5px;
+      animation: bar-enlarge 2s linear infinite;
+    }
+    @keyframes bar-enlarge{
+      0%{
+        width: 30%;
+      }
+      30%{
+        width: 60%; margin-left: 25%;
+      }
+      100%{
+        width: 30%; margin-left: 100%;
+      }
+    }
+
+
+
+/*Notification Area*/
+#notificationArea{
+  background-color: #fff; width: 300px; position: absolute; right: 20px; bottom: 20px; 
+  border: 1px solid #ccc; height: 30px; display: block;
+  box-shadow: 0px 3px 5px 2px #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+
+  -webkit-transition: height .25s ease-out;
+  -moz-transition: height .25s ease-out;
+  -o-transition: height .25s ease-out;
+  transition: height .25s ease-out;
+}
+ #notification_toggle{
+    display: none;
+  }
+.notification_box{
+  height: 0px; padding: 10px;
+}
+#notificationArea.toggle .notification_box{
+  height: 270px;
+}
+#notificationArea.toggle  #notification_toggle{
+    display: block;
+  }
+#notificationArea.toggle{
+  height: 300px;
+}
+
+/*RADIOLOGY IMAGE*/
+.radiology_result_image_preview {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+ background-color: rgba(0,0,0,0.3); z-index: 200; display: none;
+  -webkit-transition: opacity .25s ease-out;
+  -moz-transition: opacity .25s ease-out;
+  -o-transition: opacity .25s ease-out;
+  transition: opacity .25s ease-out;
+}
+#close_image_preview{
+  position: absolute; top: 0px; right: 5px; font-size: 50px; font-weight: bold; color: #f00; background-color: transparent; border: none; cursor: pointer;
+}
+
+.image_preview{
+  width: 700px; height: 650px; margin-left: calc((100% - 700px)/2); margin-top: 5px; background-color: rgba(255,255,255,0.8);
+}
+/*RADIOLOGY IMAGE*/
+.radiology_result_image_preview .button{
+  position: fixed; top: 250px;  left: 50px; background-color: transparent; font-size: 100px; color: #eee; border: none; cursor: pointer; padding: 0px;
+}
+
+.radiology_result_image_preview .button2{
+  position: fixed; top: 250px;  right: 50px; background-color: transparent; font-size: 100px; color: #eee; border: none; cursor: pointer; padding: 0px;
+}
+
+.radiology_result_image_preview.show {
+  display: block;
+}
+
+
+
+/*BOotrap*/
+
+.input-group{ border:  1px solid #787; border-radius: 3px; }
+
+.input-group .form-control{  border:  none; }
+
+.form-control{  border:  1px solid #787; }
+
+.form-control:focus{  border: 1px solid #0f0; }
+
+.form-control[readonly]{ background-color: #ccc; }
+
+
+
+.table-striped tbody>tr:nth-child(odd){
+  background-color: #b8d1f3;
+}
+
+.table-striped tbody>tr:nth-child(even){
+  background-color: #dae5f4;
+}
+
+.table-striped tbody>tr:hover{
+  background-color: #f8c700;
+}
+
+/*Confirm Dialog*/
+
+.confirm_dialog_cover{
+width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999999; 
+background-color: rgba(0,0,0,0.5); display: none
+}
+
+.message_dialog_cover{
+width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999999; 
+background-color: rgba(0,0,0,0.5); display: none
+}
+.dialog_box{
+width: auto; max-width: 500px; height: 200px; max-height: 200px; background-color: #fff; margin: auto; border-radius: 5px;
+position: relative; margin-top: 100px; box-shadow: 3px 3px 5px #ccc;
+}
+.dialog_close{
+    position: absolute;top: 7px; right:7px; border: none; background-color: transparent; 
+border-radius: 3px; cursor: pointer; font-weight: normal; font-size: 13px;
+}
+.dialog_close:hover{
+    background-color: #ccc;
+}
+.dialog_title{
+  border-bottom: 1px solid grey; padding: 5px 20px; font-size: 20px; font-weight: bold;
+}
+.dialog_body{
+  padding: 20px;
+}
+.dialog_buttons{
+  position: absolute; bottom: 0; left: 0; padding: 10px; width: 100%;
+}
+.dialog_buttons button{
+  float: right; cursor: pointer; margin-left: 20px; padding: 2px 20px; font-weight: bold;
+}

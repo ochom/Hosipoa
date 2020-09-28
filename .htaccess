@@ -1,0 +1,4 @@
+# Prevent directory listing
+IndexIgnore *
+
+ErrorDocument 404 /errorPage.php

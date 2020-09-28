@@ -1,0 +1,1 @@
+C:\wamp64\bin\php\php7.1.9\php.exe C:\wamp64\www\SJMH\Admin-Revenue\auto_bill_script.php
